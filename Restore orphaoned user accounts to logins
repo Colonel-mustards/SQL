@@ -1,1 +1,6 @@
-CREATE LOGIN UK_SSET_SGDI_user WITH  PASSWORD=*************', sid = 0x97263F31EE16DE4496B689D3D0DBE0D0, CHECK_POLICY=OFF
+#Finds the SIDs for accounts in SQL Server#
+select sid,name from sysusers
+
+#recreates the logins with the matching SID
+CREATE LOGIN UK_SSET_SGDI_user WITH  PASSWORD='*************', sid = 0x97263F31EE16DE4496B689D3D0DBE0D0, CHECK_POLICY=OFF
+
